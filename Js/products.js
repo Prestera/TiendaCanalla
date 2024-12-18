@@ -4,12 +4,12 @@ fetch("../js/products.json")
     .then(data => {
         products = data;
         if (contenedorCamisetas) {
-            cargarCamisetas();
+            cargarCamisetas(...data);
         }
         else if (contenedorShorts) {
-            cargarShorts();
+            cargarShorts(...data);
         } else (contenedorTodos)
-        cargarTodos();
+        cargarTodos(...data);
     })
             
             
